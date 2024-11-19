@@ -6,16 +6,16 @@ class Animal:
     _DEGREE_OF_DANGER = 0
 
     def __init__(self, speed):
-        self._cords = [0, 0, 0]  # Изначальные координаты
-        self.speed = speed  # Скорость передвижения
+        self._cords = [0, 0, 0]  
+        self.speed = speed  
 
     def move(self, dx, dy, dz):
-        # Изменяем координаты с учетом скорости
+        
         x = self._cords[0] + dx * self.speed
         y = self._cords[1] + dy * self.speed
         z = self._cords[2] + dz * self.speed
 
-        # Проверяем, чтобы координата z не была меньше 0
+        
         if z < 0:
             print("It's too deep, I can't dive :(")
         else:
